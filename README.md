@@ -22,7 +22,7 @@ Set the algorithm class to configure the hyperparameters:
         optimizer=optimizer,
         loss='sparse_categorical_crossentropy',
         metrics=['acc'],
-) 
+    ) 
 The main configurable hyperparameter in the Adam algorithm is the learning rate. This is the part of the gradient descent where the algorithm starts. It's written as follows:
 
     optimizer = Adam(lr=0.01) 
@@ -33,5 +33,7 @@ The default learning rate is 0.001. Reducing it can sometimes slow down learning
 Create and train a convolutional neural network for the clothing dataset. To do this, create three functions in the code:
 
 load_train() for loading the training sample
+
 create_model() for model creation
+
 train_model() for launching the model
