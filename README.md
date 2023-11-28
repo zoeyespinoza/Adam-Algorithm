@@ -11,10 +11,12 @@ Let's write the Adam algorithm into Keras:
 model.compile(
     optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['acc']
 ) 
+
 Set the algorithm class to configure the hyperparameters:
+
 from tensorflow.keras.optimizers import Adam
 
-optimizer = Adam()
+    optimizer = Adam()
 
 model.compile(
     optimizer=optimizer,
@@ -24,8 +26,8 @@ model.compile(
 The main configurable hyperparameter in the Adam algorithm is the learning rate. This is the part of the gradient descent where the algorithm starts. It's written as follows:
 
 optimizer = Adam(lr=0.01) 
-T
-he default learning rate is 0.001. Reducing it can sometimes slow down learning, but that improves the overall quality of the model.
+
+The default learning rate is 0.001. Reducing it can sometimes slow down learning, but that improves the overall quality of the model.
 
 ### Task 
 Create and train a convolutional neural network for the clothing dataset. To do this, create three functions in the code:
